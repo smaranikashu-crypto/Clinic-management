@@ -51,7 +51,7 @@ def handle_ui_routes(handler, path):
 # MAIN ROUTER CLASS
 # -------------------------------
 
-class PatientRouter(BaseHTTPRequestHandler):
+class ClinicRouter(BaseHTTPRequestHandler):
 
     def do_OPTIONS(self):
         self.send_response(200)

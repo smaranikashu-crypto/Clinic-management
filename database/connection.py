@@ -4,7 +4,7 @@ DB_FILE = "clinic.db"
 
 def get_connection():
     conn = sqlite3.connect(DB_FILE)
-    conn.row_factory = sqlite.Row
+    conn.row_factory = sqlite3.Row
     return conn
 
 def init_database():
@@ -22,7 +22,7 @@ def init_database():
         )
        """)
 
-        conn.execute("""
+    conn.execute("""
     CREATE TABLE IF NOT EXISTS doctors (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
